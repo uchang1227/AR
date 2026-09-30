@@ -3,20 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>AR Card</title>
-    <!-- A-FrameとAR.jsのライブラリを読み込み -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       <a-assets>
-        <!-- 立ち絵画像を読み込み（IMG_5318.pngに変更） -->
         <img id="chara" src="IMG_5318.png">
       </a-assets>
 
-      <!-- 作成したマーカーを指定（pattern-IMG_5315.patt.txtに変更） -->
-      <a-marker type="pattern" url="pattern-IMG_5315.patt.txt">
-        <!-- マーカーの上に立ち絵を立てて表示 -->
+      <!-- ファイル名が .patt.txt のままでも動くように指定 -->
+      <a-marker type="pattern" url="pattern-marker.patt.txt">
         <a-image src="#chara" position="0 0.5 0" rotation="-90 0 0" width="1" height="1.5"></a-image>
       </a-marker>
 
